@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(Renderer))]
@@ -5,10 +6,14 @@ public class CardBehavior : MonoBehaviour
 {
 
     [SerializeField] private Vector3 scaleOnFocus = Vector3.one * 1.5f;
+    [SerializeField] private float changeColorTime = 1f;
     private Vector3 memoScale;
 
     private Color color;
-    private int indexColor;
+    [SerializeField] private Color baseColor = Color.gray;
+    public int IndexColor { get; private set; }
+
+    public bool IsFaceUp { get; private set; } = false;
 
     private CardsManager manager;
 
@@ -23,18 +28,54 @@ public class CardBehavior : MonoBehaviour
         transform.localScale = memoScale;
     }
 
+    private void OnMouseDown()
+    {
+        manager.CardIsClicked(this);
+    }
+
     public void Initialize(Color color, int indexColor, CardsManager manager)
     {
         this.color = color;
-        this.indexColor = indexColor;
+        IndexColor = indexColor;
         this.manager = manager;
 
-        // temporary: It will be deleted when we will have finish the initialization.
-        ChangeColor(color);
+        ChangeColor(baseColor);
+        IsFaceUp = false;
+
     }
-    public void ChangeColor(Color color)
+
+    private void ChangeColor(Color color)
     {
         GetComponent<Renderer>().material.color = color;
+    }
+
+    public void FaceUp()
+    {
+        StartCoroutine(ChangeColorWithLerp(color));
+        IsFaceUp = true;
+    }
+
+    public void FaceDown(float delay = 0f)
+    {
+        StartCoroutine(ChangeColorWithLerp(baseColor, delay));
+        IsFaceUp = false;
+    }
+
+    private IEnumerator ChangeColorWithLerp(Color color, float delay = 0f)
+    {
+        yield return new WaitForSeconds(delay);
+
+        float chrono = 0f;
+        Color startColor = GetComponent<Renderer>().material.color;
+
+        while (chrono < changeColorTime)
+        {
+            chrono += Time.deltaTime;
+            Color c = Color.Lerp(startColor, color, chrono / changeColorTime);
+            ChangeColor(c);
+            yield return new WaitForEndOfFrame(); // => yield return null;
+        }
+        ChangeColor(color);
     }
 
 }

@@ -122,3 +122,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CardBehavior
   scaleOnFocus: {x: 1.5, y: 1.5, z: 1.5}
+  baseColor: {r: 0.90943396, g: 0.8562407, b: 0.8562407, a: 1}

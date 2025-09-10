@@ -4,6 +4,9 @@ using UnityEngine;
 public class GameInitializer : MonoBehaviour
 {
     const float CARD_SIZE = 1.0f;
+
+    [Header("Cards")]
+    [Space]
     [SerializeField] private int rows = 2;
     [SerializeField] private int columns = 3;
     [SerializeField] private float gap = 0.5f;
@@ -13,6 +16,11 @@ public class GameInitializer : MonoBehaviour
     [SerializeField] private Color[] colors;
 
     [SerializeField] private CardsManager cardsManager;
+
+    [Header("Victory")]
+    [Space]
+    [SerializeField] private VictoryManager victoryManager;
+    [SerializeField] private string victoryScene;
 
 
     private void Start()
@@ -48,12 +56,14 @@ public class GameInitializer : MonoBehaviour
         }
 
         cardsManager = Instantiate(cardsManager);
+        victoryManager = Instantiate(victoryManager);
 
     }
 
     private void ObjectsInitialization()
     {
-        cardsManager.Initialize(deck, colors);
+        cardsManager.Initialize(deck, colors, victoryManager);
+        victoryManager.Initialize(victoryScene);
 
     }
 }

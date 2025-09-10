@@ -205,8 +205,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.0034669025, y: 0.8866884, z: -0.46230674, w: -0.006649323}
-  m_LocalPosition: {x: 1.9860867, y: 4.183943, z: 3.3734083}
+  m_LocalRotation: {x: 0.09908449, y: 0.88072133, z: -0.41184285, w: 0.21189097}
+  m_LocalPosition: {x: 0.91903937, y: 5.3411837, z: 5.890148}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -434,6 +434,54 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1132295242002502829, guid: 4c0325770e43cc146b8bcc211310d8db, type: 3}
+      propertyPath: rows
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1132295242002502829, guid: 4c0325770e43cc146b8bcc211310d8db, type: 3}
+      propertyPath: columns
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1132295242002502829, guid: 4c0325770e43cc146b8bcc211310d8db, type: 3}
+      propertyPath: colors.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1132295242002502829, guid: 4c0325770e43cc146b8bcc211310d8db, type: 3}
+      propertyPath: colors.Array.data[5].b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1132295242002502829, guid: 4c0325770e43cc146b8bcc211310d8db, type: 3}
+      propertyPath: colors.Array.data[5].g
+      value: 0.2451347
+      objectReference: {fileID: 0}
+    - target: {fileID: 1132295242002502829, guid: 4c0325770e43cc146b8bcc211310d8db, type: 3}
+      propertyPath: colors.Array.data[5].r
+      value: 0.79607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 1132295242002502829, guid: 4c0325770e43cc146b8bcc211310d8db, type: 3}
+      propertyPath: colors.Array.data[6].b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1132295242002502829, guid: 4c0325770e43cc146b8bcc211310d8db, type: 3}
+      propertyPath: colors.Array.data[6].g
+      value: 0.15441847
+      objectReference: {fileID: 0}
+    - target: {fileID: 1132295242002502829, guid: 4c0325770e43cc146b8bcc211310d8db, type: 3}
+      propertyPath: colors.Array.data[6].r
+      value: 0.1415093
+      objectReference: {fileID: 0}
+    - target: {fileID: 1132295242002502829, guid: 4c0325770e43cc146b8bcc211310d8db, type: 3}
+      propertyPath: colors.Array.data[7].b
+      value: 0.79607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 1132295242002502829, guid: 4c0325770e43cc146b8bcc211310d8db, type: 3}
+      propertyPath: colors.Array.data[7].g
+      value: 0.437
+      objectReference: {fileID: 0}
+    - target: {fileID: 1132295242002502829, guid: 4c0325770e43cc146b8bcc211310d8db, type: 3}
+      propertyPath: colors.Array.data[7].r
+      value: 0.705
+      objectReference: {fileID: 0}
     - target: {fileID: 2720341629957623845, guid: 4c0325770e43cc146b8bcc211310d8db, type: 3}
       propertyPath: m_Name
       value: Game Initialiazer

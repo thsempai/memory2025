@@ -50,6 +50,10 @@ MonoBehaviour:
   cardPrefab: {fileID: 5595526693281213576, guid: 00692b65063e2854787996185a3a6deb, type: 3}
   colors:
   - {r: 0.7207546, g: 0.5318892, b: 0.10199348, a: 0}
-  - {r: 0.16890965, g: 0.78113204, b: 0.1164328, a: 0}
+  - {r: 0.17640536, g: 0.4566037, b: 0.1542114, a: 0}
   - {r: 0.8113208, g: 0.07194728, b: 0.79819494, a: 0}
+  - {r: 0.027447322, g: 0.93435633, b: 0.96981126, a: 0}
+  - {r: 0.5971698, g: 0.79622644, b: 0, a: 0}
   cardsManager: {fileID: 6708604593264690268, guid: be2efffc3e7f09c4a9d6652f76bb8daf, type: 3}
+  victoryManager: {fileID: 2846724559684804598, guid: 5aaf30ed80465174f87f1eda6e549cc2, type: 3}
+  victoryScene: Victory Scene
